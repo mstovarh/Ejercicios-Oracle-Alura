@@ -1,0 +1,86 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA PARA CALCULAR EL NIVEL DE OBESIDAD DE 2 SUJETOS</h1>
+
+<script>
+    function saltarlinea(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+
+    //Usando prompt()
+    function calcular3(nombre1, peso1, altura1, nombre2, peso2, altura2){
+        imc1 = peso1/(altura1*altura1);
+        imc2 = peso2/(altura2*altura2);
+        imprimir("Los IMC de " + nombre1 + " y " + nombre2 + " respectivamente son: " + imc1 + " y " + imc2)
+        if(imc1<18.5 || imc2<18.5){
+            if(imc1<18.5 && imc2<18.5){
+                imprimir("Bajo peso: " + nombre1 + " y " + nombre2);
+            }else if(imc1<18.5){
+                imprimir("Bajo peso: " + nombre1);
+            }else{
+                imprimir("Bajo peso: " + nombre2);
+            }
+        }
+        if((imc1>=18.5 && imc1<=24.9) || (imc2>=18.5 && imc2<=24.9)){
+            if((imc1>=18.5 && imc1<=24.9) && (imc2>=18.5 && imc2<=24.9)){
+                imprimir("Normal: " + nombre1 + " y " + nombre2);
+            }else if(imc1>=18.5 && imc1<=24.9){
+                imprimir("Normal: " + nombre1);
+            }else{
+                imprimir("Normal: " + nombre2);
+            }
+        }
+        if((imc1>=25 && imc1<=29.9) || (imc2>=25 && imc2<=29.9)){
+            if((imc1>=25 && imc1<=29.9) && (imc2>=25 && imc2<=29.9)){
+                imprimir("Sobrepeso: " + nombre1 + " y " + nombre2);
+            }else if(imc1>=25 && imc1<=29.9){
+                imprimir("Sobrepeso: " + nombre1);
+            }else{
+                imprimir("Sobrepeso: " + nombre2);
+            }
+        }
+        if((imc1>=30 && imc1<=34.9) || (imc2>=30 && imc2<=34.9)){
+            if((imc1>=30 && imc1<=34.9) && (imc2>=30 && imc2<=34.9)){
+                imprimir("OB T1: " + nombre1 + " y " + nombre2);
+            }else if(imc1>=30 && imc1<=34.9){
+                imprimir("OB T1: " + nombre1);
+            }else{
+                imprimir("OB T1: " + nombre2);
+            }
+        }
+        if((imc1>=35 && imc1<=39.9) || (imc2>=35 && imc2<=39.9)){
+            if((imc1>=35 && imc1<=39.9) && (imc2>=35 && imc2<=39.9)){
+                imprimir("OB T2: " + nombre1 + " y " + nombre2);
+            }else if(imc1>=35 && imc1<=39.9){
+                imprimir("OB T2: " + nombre1);
+            }else{
+                imprimir("OB T2: " + nombre2);
+            }
+        }
+        if(imc1>=40 || imc2>=40){
+            if(imc1>=40 && imc2>=40){
+                imprimir("OB T3: " + nombre1 + " y " + nombre2);
+            }else if(imc1>=40){
+                imprimir("OB T3: " + nombre1);
+            }else{
+                imprimir("OB T3: " + nombre2);
+            }
+        }
+        
+    }
+
+    pM = prompt("Ingrese peso de Sujeto1")
+    aM = prompt("Ingrese altura de Sujeto1")
+    pJ = prompt("Ingrese peso de Sujeto2")
+    aJ = prompt("Ingrese altura de Sujeto2")
+
+    calcular3("Sujeto1", pM, aM, "Sujeto2", pJ, aJ);
+
+
+
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h1>AÑOS EN LOS QUE SE HA REALIZADO MUNDIAL:</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+   var añoMundial = 1930;
+   var añoLim = parseInt(prompt("Ingrese el año limite para calcular"))
+
+   imprimir("Hubo mundial en el año" + añoMundial);
+
+    while(añoMundial<=añoLim){
+        imprimir("Hubo mundial en el año " + añoMundial);
+        añoMundial+=4;
+    }
+
+   imprimir("Fin");
+
+</script>

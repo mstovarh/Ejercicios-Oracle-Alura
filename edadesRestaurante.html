@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+
+<h1>Restaurante Doña Sandra</h1>
+<h2>Edades de los clientes</h2>
+
+<script>
+    function sL(){
+        document.write("<br>");
+    }  //opcion1
+
+    function imp1(){
+        document.write("Forma1")
+        sL();
+    }
+
+    function imp2(frase){
+        document.write(frase)
+    }
+
+    var añoAc = 2023;
+    var saltolinea = "<br><br><br>" //opcion2
+    document.write("<h3>En 2023</h3>")
+    sL();
+    document.write("<hr>"); 
+    document.write("Maria tiene: " + (2023 - 2001) + " años")
+    document.write(saltolinea)
+    document.write("Jose tiene: " + (añoAc - 2001) + " años")
+    document.write(saltolinea)
+
+    promedio = (22 + 22)/2
+
+    document.write("El promedio de las edades de los 2 es: " + Math.round(promedio))
+    añoAc = 2029;
+    document.write(saltolinea)
+    document.write("<h3>En 2029</h3>")
+    sL();
+    document.write("Maria tiene: " + (2029 - 2001) + " años")
+    document.write(saltolinea)
+    document.write("Jose tiene: " + (añoAc - 2001) + " años")
+    document.write(saltolinea)
+
+    promedio = (28 + 28)/2
+
+    document.write("El promedio de las edades de los 2 es: " + Math.round(promedio))
+    document.write(saltolinea)
+
+    var petName1 = "Issa"
+    var petName2 = "Susy"
+
+    document.write(petName1 + " y " + petName2 + " son mascotas")
+
+    document.write(saltolinea)//opcion1
+    sL();//opcion2
+    imp1();
+    imp2("Forma2")
+ 
+</script>

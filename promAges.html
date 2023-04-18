@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<h1>PROMEDIO DE EDADES DE LA FAMILIA</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var nMiem = parseInt(prompt("Digite el numero de miembros de su familia"))
+    var i = 1;
+
+    while(i<=nMiem){
+        var edadT = 0;
+        var edadF = parseInt(prompt("Digite la edad del miembro de su familia"))
+        imprimir("Edad de miembro" + i + " : " + edadF)
+        edadT = edadT + edadF;
+        i++;
+    }
+
+    prom = edadT/nMiem;
+
+    imprimir("El promedio de edades es: " + prom);
+
+</script>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<h1>TABLA DE MULTIPLICAR DEL 12</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var mult = 1;
+
+    //WHILE
+    imprimir("WHILE");
+    while (mult <= 10) {
+        imprimir("12 * "+ mult +" = "+ (12 * mult));
+        mult++;
+    }
+
+    //FOR
+    imprimir("FOR");
+    for(var mult = 1; mult <= 10; mult++){
+        imprimir("13 * "+ mult +" = "+ (13 * mult));
+    }
+</script>
