@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Search</button>
+
+<script>
+    function aleatorio(){
+        return Math.round(Math.random()*10);
+    }
+    function sortearNumero(){
+        var secretos = [];
+        var contador = 1;
+        
+        while(contador<=cantidad){
+            var numeroAleatorio = aleatorio();
+            console.log(numeroAleatorio);
+            var encontrado = false;
+            
+            if(numeroAleatorio != 0){
+                for(var i=0; i<=secretos.length; i++){
+                    if(numeroAleatorio==secretos[i]){
+                        encontrado = true;
+                        break;
+                    }
+                }
+                if(encontrado == false){
+                    secretos.push(numeroAleatorio);
+                    contador;
+                }
+            }
+        }
+    }
+
+</script>

@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<h1>TABLAS DE MULTIPLICAR</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    for(var i=0; i<=10; i++){
+        imprimir("TABLA DEL "+i);
+        for(var j=0; j<=10; j++){
+            imprimir(" "+i+" x "+j+" = "+(i*j));
+        }
+    }
+
+    imprimir("FIN");
+</script>

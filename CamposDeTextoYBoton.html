@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Search</button>
+
+<script>
+    var a = [1,4,6,12];
+    var input = document.querySelector("Input");
+    input.focus();
+
+    function verificar(){
+        var b = false;
+        for(var i=0; i<a.length; i++){
+            if(parseInt(input.value) == a[i]){
+                alert("Usted acertó");
+                b = true;
+                break;
+            }
+        }
+        if(b == false){
+            alert("Usted erró");
+        }
+    }
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+    
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    function sorteo(lim1){
+        var numPensado = Math.round(Math.random()*lim1);
+        return numPensado;
+    }
+
+    var limit = parseInt(prompt("Ingrese un numero limite"));
+    var numPens = sorteo(limit);
+    i = 1;
+    while(i<=3){
+        var numLanz = parseInt(prompt("Ingrese un numero del 0 al " +limit));
+        if(numPens === numLanz){
+            imprimir("Usted acertó");
+            break;
+        }else{
+            imprimir("---- Intento "+i+"----");
+            imprimir("Usted erró");
+        }
+    i++;
+    }
+    imprimir("----")
+    imprimir("El numero era: "+numPens);
+
+</script>
