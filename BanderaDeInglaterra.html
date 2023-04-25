@@ -1,0 +1,83 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    //Cuadro azul
+    pincel.fillStyle = "blue";
+    pincel.fillRect(0,0,600,400);
+
+    //Triangulos blancos
+    pincel.fillStyle = "white";
+    pincel.beginPath();
+    pincel.moveTo(340,200);
+    pincel.lineTo(0,0);
+    pincel.lineTo(0,400);
+    pincel.fill();
+
+    pincel.fillStyle = "white";
+    pincel.beginPath();
+    pincel.moveTo(260,200);
+    pincel.lineTo(600,0);
+    pincel.lineTo(600,400);
+    pincel.fill();
+
+    //Triangulos rojo
+    pincel.fillStyle = "red";
+    pincel.beginPath();
+    pincel.moveTo(270,200);
+    pincel.lineTo(0,30);
+    pincel.lineTo(0,370);
+    pincel.fill();
+
+    pincel.fillStyle = "red";
+    pincel.beginPath();
+    pincel.moveTo(330,200);
+    pincel.lineTo(600,30);
+    pincel.lineTo(600,370);
+    pincel.fill();
+
+    //Triangulos blancos
+    pincel.fillStyle = "white";
+    pincel.beginPath();
+    pincel.moveTo(235,200);
+    pincel.lineTo(0,50);
+    pincel.lineTo(0,350);
+    pincel.fill();
+
+    pincel.fillStyle = "white";
+    pincel.beginPath();
+    pincel.moveTo(365,200);
+    pincel.lineTo(600,50);
+    pincel.lineTo(600,350);
+    pincel.fill();
+
+    //Triangulos azul
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.moveTo(200,190);
+    pincel.lineTo(0,60);
+    pincel.lineTo(0,320);
+    pincel.fill();
+
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.moveTo(400,210);
+    pincel.lineTo(600,80);
+    pincel.lineTo(600,340);
+    pincel.fill();
+
+    //Cruz blanca
+    pincel.fillStyle = "white";
+    pincel.fillRect(250,0,100,400);
+
+    pincel.fillStyle = "white";
+    pincel.fillRect(0,150,600,100);
+
+    //Cruz roja
+    pincel.fillStyle = "red";
+    pincel.fillRect(260,0,80,400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(0,160,600,80);
+
+</script>
