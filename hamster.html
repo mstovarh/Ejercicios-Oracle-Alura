@@ -1,0 +1,100 @@
+<canvas width="900" height="900"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    //Fondo
+    pincel.fillStyle = "beige";
+    pincel.fillRect(0,0,900,900);
+
+    function dibHamster(x){
+        pincel.fillStyle = "#DDC9AB";
+        pincel.beginPath();
+        pincel.arc(400+x,200,60,0,360);
+        pincel.fill();
+        pincel.fillStyle = "#DDC9AB";
+        pincel.beginPath();
+        pincel.arc(400+x,350,100,0,360);
+        pincel.fill();
+        pincel.fillStyle = "#E2D0CC";
+        pincel.beginPath();
+        pincel.arc(400+x,350,55,0,360);
+        pincel.fill();
+        pincel.fillStyle = "#D2C0A5";
+        pincel.beginPath();
+        pincel.arc(500+x,300,20,0,360);
+        pincel.fill();
+        pincel.fillStyle = "#D2C0A5";
+        pincel.beginPath();
+        pincel.arc(300+x,300,20,0,360);
+        pincel.fill();
+        pincel.fillStyle = "#D2C0A5";
+        pincel.beginPath();
+        pincel.arc(480+x,450,30,0,360);
+        pincel.fill();
+        pincel.fillStyle = "#D2C0A5";
+        pincel.beginPath();
+        pincel.arc(320+x,450,30,0,360);
+        pincel.fill();
+
+        //Detalles
+        pincel.fillStyle = "black";
+        pincel.beginPath();
+        pincel.arc(420+x,200,5,0,360);
+        pincel.fill();
+        pincel.fillStyle = "black";
+        pincel.beginPath();
+        pincel.arc(380+x,200,5,0,360);
+        pincel.fill();
+
+        pincel.fillStyle = "#DDC9AB";
+        pincel.beginPath();
+        pincel.moveTo(340+x,136);
+        pincel.lineTo(353+x,162);
+        pincel.lineTo(379+x,143);
+        pincel.fill();
+
+        pincel.fillStyle = "#DDC9AB";
+        pincel.beginPath();
+        pincel.moveTo(470+x,136);
+        pincel.lineTo(425+x,145);
+        pincel.lineTo(444+x,170);
+        pincel.fill();
+
+        pincel.fillStyle = "#CC9D9D";
+        pincel.beginPath();
+        pincel.moveTo(400+x,237);
+        pincel.lineTo(385+x,224);
+        pincel.lineTo(415+x,224);
+        pincel.fill();
+    }
+
+    function limpiarPantalla(){
+
+        pincel.clearRect(0,0,900,900);
+
+    }
+
+    var x = 0;
+    var sentido = 1;
+
+    function actualizarPantalla(){
+        limpiarPantalla();
+        dibHamster(x);
+        x = x + sentido;
+    }
+
+    setInterval(actualizarPantalla,10);
+
+
+
+    /*function exibirAlerta(evento){
+        var x = evento.pageX - pantalla.offsetLeft; 
+        var y = evento.pageY - pantalla.offsetTop; 
+        console.log(evento);
+        alert(x + " , " + y);
+    }
+
+    pantalla.onclick = exibirAlerta;*/
+
+</script>

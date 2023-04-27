@@ -1,0 +1,22 @@
+<canvas width="500" height="500"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    
+    //Cuadros 
+    
+    function cuadrados(color, i){
+        pincel.fillStyle = color;
+        pincel.fillRect(0,i,500,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(0,i,500,50);
+    }
+
+    cuadrados("red",0);
+    cuadrados("orange",50);
+    cuadrados("yellow",100);
+    cuadrados("green",150);
+    cuadrados("blue",200);
+    cuadrados("purple",250);
+
+</script>

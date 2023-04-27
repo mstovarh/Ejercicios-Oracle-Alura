@@ -1,0 +1,23 @@
+<canvas width="900" height="500"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    function R(x, y, h, color, texto){
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,h);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,h);
+        pincel.font="15px Bold";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x , y - 10);
+    }
+
+    R(20, 20, 180, "Pink", "Vainilla"); 
+    R(80, ((180-100)+20), 100, "Blue", "Brownie");
+    R(140, ((180-80)+20), 80, "Green", "Chicle");
+    R(200, ((180-120)+20), 120, "Red", "Mora");
+    R(260, ((180-60)+20), 60, "Yellow", "Macadamia");
+
+</script>

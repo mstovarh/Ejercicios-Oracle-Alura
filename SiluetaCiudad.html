@@ -1,0 +1,22 @@
+<canvas width="1100" height="500"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "#1E90FF"
+    pincel.fillRect(0,0,1100,500);
+    //Edificios
+    var i=0;
+    while(i<=800){
+        if(i>=0 && i<=150){
+            pincel.fillStyle = "black";
+            pincel.fillRect(i,0,49.5,(200+i));
+        }else if(i>=200 && i<=300){
+            pincel.fillStyle = "black";
+            pincel.fillRect(i,0,49.5,(400-i));
+        }else{
+            pincel.fillStyle = "black";
+            pincel.fillRect(i,0,49.5,(800-i));
+        }
+        i+=50;
+    }
+</script>

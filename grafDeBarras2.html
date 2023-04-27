@@ -1,0 +1,44 @@
+<canvas width="900" height="500"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    function R(x, y, h, color){
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,h);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,h);
+    }
+    function T(x, y, texto){
+        pincel.font="15px Bold";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x + 10 , y - 10);
+    }
+
+    function acum(x, y, p, c, t){
+        T(x, y, t);
+        var i=0;
+        var a=0;
+        while(i < p.length){
+            var z = p[i];
+            var c = colores[i];
+            R(x, y + a, z, c);
+            a = a + z;
+            i++;
+        } 
+        //T(x, y + a + 30, t);
+    }
+
+    var p1 = [60,30,10];
+    var p2 = [50,40,10];
+    var p3 = [30,50,20];
+
+    var colores = ["red", "orange", "yellow"]
+
+    acum(20, 20, p1, colores, "2023");
+    acum(80, 20, p2, colores, "2022");
+    acum(140, 20, p3, colores, "2021");
+
+
+</script>
