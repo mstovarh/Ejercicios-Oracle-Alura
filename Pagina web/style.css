@@ -1,18 +1,27 @@
-body{
-    background: #d7b6b6;
-}
-
-#banner{
-    width: 100%;
+.titP{
+    text-align: left;
+    padding-left: 50px;
 }
 
 h1{
     text-align: center;
-    background: #b57373;
 }
 
-p{
+#banner{ 
+    width: 100%;
+}
+
+.principal{ 
     text-align: center;
+    background: #eeadad;
+    padding: 20px;
+}
+
+.tituloC{
+    background: #b26666;
+    text-align: center;
+    font-style: oblique;
+    font-size: 30px;
 }
 
 em strong{
@@ -21,4 +30,26 @@ em strong{
 
 #mision{
     font-size: 20px;
+}
+
+.diferenciales{
+    background: #d69292;
+    padding: 10px;
+}
+
+.items{
+    font-style: italic;
+    padding: 10px
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+
+}
+
+.imgDif{
+    width: 10%;
 }
