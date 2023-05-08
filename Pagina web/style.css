@@ -1,0 +1,24 @@
+body{
+    background: #d7b6b6;
+}
+
+#banner{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    background: #b57373;
+}
+
+p{
+    text-align: center;
+}
+
+em strong{
+    color: rgb(153, 51, 116)
+}
+
+#mision{
+    font-size: 20px;
+}
